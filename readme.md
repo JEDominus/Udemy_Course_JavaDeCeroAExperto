@@ -1,10 +1,6 @@
 # Java de cero a experto
 
-## Overview
-This repository contains the excercises and proyect that I did durin the Udemy course "Java de cero a experto".
+## Java Fundamentals
+During this part of the course, I worked with most basic programming fundamentals in Java language
 
-## Lessons and Repository structure
-The repository structure is managed by branches whose contains the exercises for each section. So feel you free to navigate trough the branches and see what I did during this course.
-
-## Certificate
-So far course still in progress, I'll attach the cours certidicate once it's completed
+Find inside the "Fundamentos Java" folder each lesson and laboratorio done during this module 
