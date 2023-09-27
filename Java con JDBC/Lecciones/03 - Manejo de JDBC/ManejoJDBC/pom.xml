@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>mx.com.je.jdbc</groupId>
+    <artifactId>ManejoJDBC</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+        <exec.mainClass>IntroduccionJDBC</exec.mainClass>
+    </properties>
+    <!-- Aqui se inixializa el listafdo de librerias del proyecto -->
+    <dependencies>
+        <!-- Aqui es donde vamos a agregar la dependencia de JDBC -->
+        <dependency> <!-- Indexing Maven repository - crea los indices del repositorio local de maven para ver a que librerias tenemos acceso -->
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.19</version>
+            <!-- Una vez terminado de agregar la dependencia, hay que hacer clean an build para actualizar las librerias -->
+            <!-- Despues podremos ver las dependencias en el folder de dependencies apra poder empezar a trabajar -->
+        </dependency>
+    </dependencies>
+    <name>ManejoJDBC</name>
+</project>
