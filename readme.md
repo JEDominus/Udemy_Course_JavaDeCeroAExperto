@@ -1,10 +1,13 @@
 # Java de cero a experto
 
-## Overview
-This repository contains the excercises and proyect that I did durin the Udemy course "Java de cero a experto".
+## Java JDBC
+During this part of the course, I worked with multiple Maven projects in order to be able to implement JDBC with mysql-connector dependency.
 
-## Lessons and Repository structure
-The repository structure is managed by branches whose contains the exercises for each section. So feel you free to navigate trough the branches and see what I did during this course.
+Some of the most important topic are:
+- Introduction to JDBC
+- JDBC Manage 
+- Transactions using JDBC
+- Data Layer
+- Connexion pool
 
-## Certificate
-So far course still in progress, I'll attach the cours certidicate once it's completed
+Find inside the "Java con JDBC" folder each lesson and laboratory done during this module
