@@ -1,0 +1,27 @@
+Concepto de Servlets
+- Un servlet es una clase de java capaz de procesar peticiones web http
+- En la peticion pueden ir parametros del link o de un formulario html
+- Una vez procesada la peticion y los parametros, pasa a hacer calculos o acceder a la base de datos 
+- Un servlet permite leer parametros de una web 
+- Tambien puede generar archivos binarios, pdf, video, etc
+
+Funciones
+- Su uso ams comun es para controlar un flujo de aplicacion web 
+- MVC, el servlet actua como el controlador (hsp - Vista, JavaBean - Modelo)
+- Contiene codigo java y puede generar embebidamente codigo html
+- El maptron MVC, separa las responsabvilidades de una aplicacion web 
+- Controlador procesa parametros y redirige la respuesta, jsp muestra, obtiene informacion
+- Servlet tiene tarea de administracion y fluejo
+
+Metodos http (8)
+- Get, envia informacion hacia el servidor mediante una URL, el serviudor usa doGet
+- Post, envia informacion hacia el servidor en el cuerpo del mensaje, no en la url, el servidor usa doPost
+- Al crear un servlet hay que extender de HttpServlet para obtener estos metodos 
+
+Ciclo de vida 
+- Se compila y se carga la clase en memoria
+- Se crea un subproceso (hilo) por cada llamada
+- Se ejecuta el metodo init(), equivalente a un constructor en una clase java normal, solo la primera vez que se llama al servlet
+- Se ejecuta el metodo service(), manda a llamar indirectamente doget y dupost, no se deb sobreescribir
+- Se ejecuta el metodo destroy(), equivalente a finilize(), sirve para liberar el recurso del servlet
+

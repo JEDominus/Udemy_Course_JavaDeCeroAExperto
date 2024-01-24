@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carrito de Compras</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Carrito Compras</h1>
+        <!-- Vamos a crear un formulario para agregar varios elementos al carrito de compras -->
+        <form action="/SesionesCarritoCompras/CarritoServlet" method="post" name="form1">
+            Articulo a agregar: <input type="text" name="iArticulo">
+            <input type="submit" value="Agregar">
+            <!-- Este fpormulario va a enviar el articulo al servlet y el servlet lo guardara en la sesion -->
+        </form>
+    </body>
+</html>

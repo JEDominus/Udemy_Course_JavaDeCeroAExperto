@@ -1,0 +1,39 @@
+Cabeceros de respuesta
+- Se suan para indicar al navegador como comportarse ante una respuesta del sertvidor como
+	- Generarexcel, hojas, audios, etc en lugar de solo respodner texto plano
+- Para indicar el tipo de respuesta se utilizan los MIME (Multuporpouse Internet Mail Extension)
+- Son un conjunto de especificaciones con el objetivo de intercambiar archivos a travez de internet como texto, audio, etc
+
+Ejemplos comunes de tipos MIME
+- El nombre del tipo mime se debe establecer
+- application/msword, pdf, vnd, ms-excel, zip, 
+- audio/x-wav
+- text/css, html, xml
+- image/gif, hpeg, png
+- video/mpeg, quicktime
+
+- El navegador desplegara el tipo de documento o preguntara por alguna aplicacion para abrir el tipo de respuesta
+	- por default text/html es lo que retorna el servlet
+
+Establecer valores de headers de respuesta
+- Se usa el objeto response con el metodo setHeader(String nombre, String valor)
+- Tmbien se usa setDate/IntHeader para poner un header o reemplazarlo si ya existe
+- add/Date/Int header para establecer valores en ehaders ya creados
+	- set...Header los crea o remplasa, add...Header los modifica
+
+Metodos mas comunes para establecer valores en los ehaders
+- setContenType se usa para definir el tipo de respuesta MIME 
+- setContentLength para establecer la longitud
+- addCookie para agregar cookies
+- sendRedirect para redireccionar en la respuesta 
+
+Cabeceros de respuesta mas comunes
+- Cache.Control y Pragma: indica el control de cache del server al navegador
+- Content-Encoding: Indica la codificacion del documento
+- Conten-Length: Indica el numero de bytes para la respuesta
+- Content-Type: Indica el tipo MIME a responder
+- Expires: Indica el tiempo en que el documentos e considera expirado
+- Last-Modified: Indica el tiempo en que el doicumento fue modificado
+- Refresh: Indica los segundos en que el navegador recarga la pagina
+- setCookies: Agrega una cookie al navehgador
+- WWW-Authenticated: Indica el tipo de autenticacion

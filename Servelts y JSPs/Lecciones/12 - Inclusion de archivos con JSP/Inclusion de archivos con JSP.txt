@@ -1,0 +1,23 @@
+Inclusion de archivos con JSP
+- Es agregar un jsp dentro de otro 
+- Existen 2 formas
+	- Inclusion estatica o inclusion en tiempo de traduccion
+		- Directiva de include con el atributo file que señala el archivo
+	- Inclusion dinamica, en tiempo de ejecucion
+		- Se usa la accion "No directiva" con la pagina que se quiere agregar
+
+Inclusion estatica
+- Usa la directiva include por medio del simbolo @(directiva)
+- Despues con file se localiza el jsp a agregar
+- Directiva @include y atributo file 
+- Reutilizar codigo que puede venir de un texto plano HTML o JSP
+- El JSP que estamos incluyendo puede afectar o compartir informacion con el JSP principal 
+- No se delehga el control al incuido, si no que se incluye y genera un unico JSP 
+- Una vez unido, se pueden compartir variables y metodos 
+- Hay que compilar y reconstruir el proyecto con la inclusion estatica 
+- 1.- Incluye ambos, 2.- Traduce a servlet, 3.- Tiempo de ejecucion al final
+
+Inclusion Dinamica
+- Utiliza acciones y no directivas
+- La accion usa jsp: en lugar de @ y usa page en lugar de file 
+

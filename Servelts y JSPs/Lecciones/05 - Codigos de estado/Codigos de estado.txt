@@ -1,0 +1,19 @@
+Codigos de estado http (Status code)
+- Se usan para indicar el estado de la respuesta del servidor hacia el cliente
+- Permite indicar una respuesta al cliente
+- Tambien conocido como response header
+- Inclue un numero de status (status code)
+
+Metodos Para manejar statuc code
+- response.setStatus(int codigo), por lo recular se usan constantes SC_OK o SC_NOT_FOUND
+- response.sendError(int codigo, String mensaje)... Usan el mensaje para desplegar un codigod e ewrror
+- response.sendRedirect(String url) indica un redireccionamiento a otra pagina, su codigo es 302
+
+Status code mas comunes
+- 200 OK - default
+- 204 Sin contenido  - continua desplegando el documento previo
+- 301 Movido permanentemente - El documento solicitado ha cambiado de ubicacion y redirecciona
+- 302 Encontrado - El documento se ha movido temporalmente y el navegador se mueve a la nueva url 
+- 401 Sin autorizacion - Se trata de acceder a un recurso protegido sin autorizacion
+- 404 No encontrado - Recurso no alojado en el servidor
+- 500 Error interno del servidor - El server lanzo una exception y no se recupero

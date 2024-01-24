@@ -1,0 +1,24 @@
+Session Http
+- Con la clase HttpSession se administra el manejo de sesiones HTTP
+- Esto ocurre de forma automatica
+- Cada peticion a nuestro servidor genera una cookie JSESSIONID para cada cliente
+- El navegador web diferente se considera un cliente diferente, como opera y chrome
+- Una session permite administrar las peticiones de un usuario 
+- HttpSession se obtiene a partir de HttpServletRequest
+- Una session tiene una duracion mas larga que un request, httpSession mas longevo que HttpRequest
+- Por lo que la sesion expira hasta segun la duracion que pongamos 
+- Tambien se puede destruir manualmente mediante invalidate
+
+Manejo de sesiones cons ervlets
+- Usamos request.getSession() para obtener la sesion
+- session.get/setAttribute(...) permite obtener y agregar atributos agregados a la session
+- La sesion esta asociada con el cliente que reviso la peticion
+- session.removeAttribute() permite eliminar un atributo
+- session.invalidate() elimina la sesion de un cliente
+
+Manejo de sesiones cons ervlets
+- session.isNew(), permite saber si la sesion se creo recientemente... retorna boolean... false si se hace mas de una peticion
+- session.creationTime() saber cuando se creo
+- session.getLastAccessedTime(), saber cuando fue la ultima vez que se entro 
+- session.getMaxInactiveInterval, retorna tiempo en segundo de inactividad para destruir la session
+- session.setMaxInactiveInterval(), permite modificar el valor anterior... se puede configurar en web.xml

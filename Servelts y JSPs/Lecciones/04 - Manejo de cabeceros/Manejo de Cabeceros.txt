@@ -1,0 +1,24 @@
+Manejo de cabeceros de peticion
+- Tambien conocidos como request headers
+- Permiten la obtencion de metadatos de la peticion http
+	- Nombre del metodo utilizado, Ip del equipo, dominio del equipo, recurso solicitao, navegador, etc
+- Como procesar cabeceros desde servlets
+
+Metodos de procesamiento de cabeceros
+- Estos metodos estan en HttpServletRequest
+- getHeader... Procesa un cabecero a la vez
+- getHeaders... Regresa los nombres de cabeceros en un enumerador
+- getHeaderNmaes... Regresa nombres de cabeceros
+
+- getCookies... Obtener las cookies aprocesadas en una peticion http...
+	- coockie es archivo que se guarda el navegador web que contiene las preferencias de un user al usar nuestra aplicacion web
+- getAuthType... Procesar seguridad en api de servlets
+- getRemoteUser
+- getContentLenght... retorna el alrgo de la peticion
+- getContentType... Obtiene el tipo de contenido, getDateHeader, getIntHeader
+
+- Podemos obtener informacion relaytiva al contexto de la peticion
+- GetMethod... retorna informacion acerca del metodo ejecuitado
+- getRequestURI.. Obtener URI con la cual se solicito el recurso
+- getQueryString... Recuperar parametros despues del ? de una peticion web
+- getProtocol... Recupera el protocolo utilizado (http, ftp, etc)

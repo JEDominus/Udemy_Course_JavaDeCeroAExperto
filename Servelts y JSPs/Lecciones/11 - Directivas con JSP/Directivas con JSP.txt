@@ -1,0 +1,21 @@
+Directivas
+- Permite controlar comportamiento de un JSP
+- Los imports, los MIME, indicar permisos del JSP para acceder a la sesion, tamaño de buffer, etc
+
+Atributos
+- Import: specifica las clases a importar dentro del jsp (y al servlet), se reocmienda poner al inicio
+	- <%@ page import="paquete.clase, paquete.clase ..." %>
+- ContentType: especifica las caracterristicas de respuesta del jsp
+	- <%@ page contentType="MIME"%>
+- Session: Permite definir si el jsp tiene acceso al objeto session
+	- <%@ page session="true"%>
+- isELIgnore: definir si se puede utilizar ExpressionLanguage
+	- <%@ page isELIgnored="true"%>
+- buffer: definir el tamaño del fuber, si se excede, hace un flush (vaciado) automatico
+	- <%@ page buffer="tamañoEnKb"%>
+- errorPage: Define la clase que maneja exceptions... normalmento son false ya que el error page viene del BE
+	- <%@ page isErrorPage="true"%>
+- isThreadSafe: un JSP se considera seguro para ser accedido con multiples hilos
+	- <%@ page isThread safe="true"%>
+- extends: Permite heredar de una clase segun se especificque 
+	- <%@ page extends="paquete.nombreclase"%>

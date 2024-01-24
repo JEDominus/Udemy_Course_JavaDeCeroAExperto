@@ -1,0 +1,29 @@
+Manejo de sesiones con servlets
+- Una sesion permite administrar las peticiones der un mismo usuario
+- El protocolo httm no recuerda informacion ya que es stateless, no tiene estado
+	- Por esto es que no puede recordar mas de una peticion para el mismo usuario
+- Las sesiones se pueden manejar mediante 2 mecanismo, cookies y URL rewriting
+- HTTPSession es la clase en la que se abtrae la sesion
+
+Concepto y uso de cookies
+- Se suan para recordar informacion del usuario
+- Una cookie es un archivo que maneja informacionen formato nombre valor y se almacena en el navegador web
+- Sirven para almacenar las preferencias del usuario como lenguaje, colores, etc
+- No se debenm utilizar para almacenar informacion sensible ya que es texto plano
+- En java se pueden crear y leer cookies de un navegador 
+- El objeto cookie permite crear y leer la informacion de las cookies del navegador web
+- Una cookie se asocia a una IP o un dominio del sitio web
+
+API de las cookies en los resvlets
+- Se puede iterar el arreglo de cookies y escribir una respuesta http
+- Para crear una cookie se usa Cookie c = new Cookie("usuario", "Juan")
+- se pueden obtener los valores con getName y getValue
+- Para leer las cookies se usa request.getCokkies(), retorna un array de cookies
+- Todas las cookies son de tipo string 
+- Para agregar cookies se usa response.addCookie(c)
+
+Metodos del Objeto Cookie
+- get/setDomain... Especifica el dominia de donde viene/ se va almacenar la cookie
+- get/set Max age... tiempo a expirar en segundos
+- getName: Obtiene el nombre de la cookie
+- get/setValue... Maneja el valor de la cookie

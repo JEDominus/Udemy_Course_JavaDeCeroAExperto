@@ -1,0 +1,117 @@
+<!DOCTYPE html><!--  -->
+<html>
+    <head>
+        <title>Ejercicio Formulario</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Asi se configura el css que hemos creado -->
+        <link rel="stylesheet" type="text/css" href="recursos/Estilos.css">
+        <!-- Asi se configura el script de funciones -->
+        <script type="text/javascript" src="recursos/Funciones.js"></script>
+        <!-- Con esto ya se encuentra completo el head -->
+    </head>
+    <body>
+        <!-- con Onsubmit se llama a la funcion de JS, donde se validara el formulario, this se refiere a este formulario -->
+        <form name="form1" action="/ManejoFormulario/Servlet" method="post" onsubmit="return validarForma(this)">
+            <!-- Se pueden agregar inputs ocultos para manejar informacion que no se quiere mostrar al usuario -->
+            <input type="hidden" name="oculto" value="valorOculto"> </input>
+            <input type="hidden" name="oculto" value="valorOculto"> </input>
+            <!-- De esta forma se le asigna un ancho a la tabla y el Id se referenciara en css -->
+            <table width="400" id="enfasisColumna">
+                <caption>Registro de datos</caption><!-- Titulo del formulario -->
+                <tr><!-- Renglon 1 Table Row -->
+                    <!-- Otra foprma de asignar valores css a las etiquetas es con class -->
+                    <td class="columna"> <!-- Table Data de izquierda a derecha -->
+                        Usuario: (*)
+                    </td>
+                    <td>
+                        <!-- onfocus es para que se seleccione lo escrito en cuanto se le de click y asi remplazar facilmente -->
+                        <!-- Tipo text permite escribir texto en una caja -->
+                        <input class="default" type="text" name="iUsuario" value="Escribir usuario" onfocus="this.select()">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna"><!-- esta clase es solo para iluminar la columna izquierda -->
+                        Password: (*)
+                    </td>
+                    <td>
+                        <!-- Tipo password permite escribir texto en una cajaa pero sin ser mostrado-->
+                        <input class="default" type="password" name="iPassword" onfocus="this.select()">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Tecnologias: (*)
+                    </td>
+                    <td>
+                    <!-- Del lado del servidor esto se procesa como un arreglo de valores -->
+                        <!-- Tipo checkbox permite seleccionar valor, multiples selecciones -->
+                        Java <input type="checkbox" name="iTecnologia" value="java">
+                        <!-- Amperson no break space... permite agregar espacios en linea sin saltar de linea -->
+                        &nbsp;&nbsp;
+                        .Net <input type="checkbox" name="iTecnologia" value="net">
+                        &nbsp;&nbsp;
+                        Php <input type="checkbox" name="iTecnologia" value="php">
+                        &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Genero: (*)
+                    </td>
+                    <td>
+                        <!-- Tipo Radio permite la seleccion de un solo valor -->
+                        Hombre <input type="radio" name="iGenero" value="H">
+                        &nbsp;&nbsp;
+                        Mujer <input type="radio" name="iGenero" value="M">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Ocupacion: (*)
+                    </td>
+                    <td>
+                        <!-- Componente select permite hace un dropdown -->
+                        <select name="iOcupacion" class="default">
+                            <!-- Value es lo que recibe el servidor -->
+                            <option value="">-- Seleccionar --</option>
+                            <option value="1">Ingeniero</option>
+                            <option value="2">Profesor</option>
+                            <option value="3">Jubilado</option>
+                            <option value="4">Otro</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        <!-- Este elemento ya no es obligatorio en el JS asi que se elimina el asterisco -->
+                        Musica:
+                    </td>
+                    <td>
+                        <!-- Multiple permite seleccionar multiples elementos -->
+                        <select name="iMusica" multiple class="default">
+                            <option value="rock">Rock</option>
+                            <option value="pop">Pop</option>
+                            <option value="salsa">Salsa</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna">
+                        Comentarios:
+                    </td>
+                    <td>
+                        <!-- Area de texto definido por columnas y renglones -->
+                        <textarea name="iComentarios" cols="30" rows="2" class="default" onfocus="this.select()">Dejanos un comentario...</textarea>
+                    </td>
+                </tr>
+                <!-- css emebebido para alinaer elementos de este renglon -->
+                <tr style="text-align: center">
+                    <!-- Este tipo de input es un boton que reinicia un formulario -->
+                    <td><input type="reset" value="Limpiar" class="default"></td>
+                    <!-- Este tipo de input es un boton que envia el formulario -->
+                    <td><input type="submit" value="Enviar" class="default"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

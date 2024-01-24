@@ -1,0 +1,33 @@
+Elementos de un JSP
+- Se compone de expresiones, scriptlets, declaraciones y una syntaxis equivalente xml, conocidos como jspx
+
+Expresion
+- Syntaxis: <%= expresion%>... Equivalenbte a un out.println... Lo manda cvomo una cadena
+- Valor: Cadena, expresion matematica o resultado de una funcion que no sea void 
+
+Scriptlets
+- Syntacis: <% codigo java %>
+- Contiene codigo java, a diferencia de la expresion que solo contiene informacion
+- Puede ser contraproducente tener mucho codigo en un scriptlet
+- El codigo en el scriptlet, se pone en el metodo service del servlet generado por el jsp 
+- Puede contener cualquier logica java 
+
+Declaraciones
+- Syntaxis <%! codigo java%>
+- Tambien maneja codigo java
+- Este sirve mejor para declara variables y metodos del servlet generado 
+- Scriptlet crea variables y metodos en el servlet, el scriptlet solo llama a metodos de otras clases
+
+Sintaxis XML
+- Cada elemento jsp tiene su equivalente en xml 
+- Se usa esa sintaxis para mayor compatibilidad con xml 
+
+Variables implicitas en los jsp
+- Dentro de un JSP se pueden suar objetos ya instanciado oara usarlois de forma inmediata
+- request: objeto HTTPServletRequest
+- response: HTTPServletResponse
+- out: JSPWriter, equivalente al printWriter
+- session: HTTPSession, se asocia con el objeto request, se puede deshabilitar para jsp
+- application: ServletContext que se pobtiene a partir de getServletContext() en un Servlet
+
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    En terminos generales, un documento jspx utiliza sintaxis xml 
+    Existe lo mismo que en los jsp, pero aqui se usan etiquetas jsp:
+-->
+
+<!--Esta etiqueta abre y cierra el documento -->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <!--Aqui usa una directiva para setear el contenido de la pagina en html-->
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+    
+    <!--Uso de declaraciones con jspx-->
+    <jsp:declaration>
+        private int contadorVisitas = 0;
+    </jsp:declaration>
+
+    <!-- Ahora abrimos el html -->
+    <html>
+        <body>
+            <h1>Ejemplo de documento JSPx</h1>
+            <!-- Ejemplo de salida de texto -->
+            <jsp:text>Saludos desde un documento JSPx</jsp:text><br/><!--XML ams estricto, hay que cerrar con /-->
+            
+            <!-- Ejemplo de Expresion -->
+            <jsp:expression>2*3</jsp:expression><br/>
+            
+            <!-- Ejemplo de scriptlet -->
+            <jsp:scriptlet>
+                String nombreAplicacion = request.getContextPath();
+            </jsp:scriptlet><bt/>
+            <jsp:expression>nombreAplicacion</jsp:expression><br/>
+            <jsp:expression>++this.contadorVisitas</jsp:expression><br/>
+        </body>
+    </html>
+
+    
+</jsp:root>

@@ -1,0 +1,18 @@
+Jav Server Pages (JSP)
+- Son componented del lado del servidor
+- Se especializan enmanejar HTML y en incrustar codigo java usando tags
+- Son usados como componentes de presentacion, es decir, muestran la informacion  procesada
+- Al compilarse un jsp se crea un servlet asociado automaticamente
+- Su ciclo de vida es similar a el de un servlet
+
+Beneficios de JSP
+- Permiten enfocarnos en escribir HTML para hacer mas sencillo el mantenimiento de la capa de presentacion
+- Permite usar herramientas de diseño HTML
+- Permite separa el codigo de presentacion que el codigo de java 
+
+Funciones de un JSP
+- Dentro del MVC, entra en la parte de la vista, Servlet controlado, bean Modelo
+
+Ciclod e vida
+- Similar al del servlet
+- La diferencia es que como primer paso, se debe de traducir de jsp a servlet 

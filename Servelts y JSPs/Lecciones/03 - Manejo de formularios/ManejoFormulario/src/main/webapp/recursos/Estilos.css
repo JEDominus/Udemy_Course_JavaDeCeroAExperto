@@ -1,0 +1,42 @@
+body, default{
+    line-height: 1.6em;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", "Sans-Serif";
+    font-size: 12px;
+    color: #669;
+}
+
+#enfasisColumna{
+    margin: 45px;
+    width: 480px;
+    text-align: left;
+    border-collapse: collapse; /*Es para que no deje espacios entre los renglones*/
+}
+
+#enfasisColumna caption{/*Selecciona el elemento caption dentro del elemento con el Id dado*/
+    font-size: 20px;
+}
+
+#enfasisColumna th{
+    font-size: 14px;
+    font-weight: normal;
+    padding: 12px 15px;
+    color: #039;
+}
+
+#enfasisColumna td{
+    padding: 10px 15px;
+    color: #669;
+    border-top: 1px solid #e8edff;
+}
+
+.columna {/*clases en html se referencian con ., los Id con #*/
+    background: #d0dafd;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+#enfasisColumna tr:hover td{/*Efecto al pasar por encima de dado elemento*/
+    color: #339;
+    background-color: #eff2ff;
+}
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html><!-- --> <!-- Indica que es un archivo de tipo html -->
+<html>
+    <head>
+        <title>Formulario servlet</title><!-- Titulo de la pestaña -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Formulario servlet</h1>
+        <!-- En action ponemos el nombre de la app y el del servlet -->
+        <!-- En method indica que la informacion se mandara en el cuerpo de la peticion, si no se especifica es get por default-->
+        <!-- Ahora el cotenido se mandara el metodo dopost de nuestro servlet -->
+        <form name="form1" action="/ManejoParametros/MyServlet" method="post">
+            <!-- Definimos el tipo de dato de la entrada, en este caso, text -->
+            <!-- Con el name, es como recuperamos el nombre del parametro en el servlet -->
+            USUARIO:  <input type="text" name="usuario" /><br>
+            PASSWORD: <input type="password" name="password" /><br>
+            <!-- Agregamos un boton de tipo submit para que envie la informacion en la peticion -->
+            <!-- con Value ponemos el valor del boton -->
+            <input type="submit" value="Enviar" />
+        </form>
+    </body>
+</html>
